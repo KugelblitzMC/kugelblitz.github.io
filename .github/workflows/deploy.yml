@@ -37,6 +37,7 @@ jobs:
           node-version: '20.x'
       - name: Build site
         env:
+          DEPLOYMENT_BRANCH: main
           GH_EMAIL: ${{ secrets.GH_EMAIL }}
           GH_NAME: ${{ secrets.GH_NAME }}
           GIT_USER: ${{ secrets.GH_NAME }}
