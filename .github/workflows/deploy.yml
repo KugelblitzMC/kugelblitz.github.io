@@ -1,9 +1,15 @@
 name: Deploy to GitHub Pages
 
 on:
+  # Triggers after a push on relevant files to the master branch
   push:
     branches:
       - master
+    paths-ignore:
+      - '.gitignore'
+      - 'LICENSE'
+      - 'README.md'
+  # Triggers on a manual run
   workflow_dispatch:
 
 jobs:
